@@ -1,2 +1,2 @@
-import o,{useState as t,useEffect as e}from"react";var n="XAesA";const c=({children:c,type:l})=>{console.log(l);const[u,r]=t(0);return e((()=>{console.log("Button count updated",u)}),[u]),e((()=>(console.log("Button mounted"),()=>{console.log("Button unmounted")})),[]),o.createElement("button",{className:n,onClick:()=>r(u+1)},c," ",u)};export{c as Button};
+import{useState as e,useEffect as n}from"react";function t(t,r){const[o,i]=e(r);return n((()=>{if("undefined"==typeof window)return;const e=window.matchMedia(t),n=()=>i(e.matches);return e.addEventListener("change",n),n(),()=>e.removeEventListener("change",n)}),[t]),o}export{t as useMediaQuery};
 //# sourceMappingURL=index.js.map

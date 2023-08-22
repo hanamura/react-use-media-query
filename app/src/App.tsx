@@ -1,5 +1,7 @@
-import { Button } from '../../src/Button'
+import { useMediaQuery } from '../../src'
 
 export const App = () => {
-  return <Button type="primary">Click me</Button>
+  const mq = useMediaQuery('(min-width: 600px)', 'not yet')
+
+  return <div>{typeof mq === 'boolean' ? (mq ? 'true' : 'false') : mq}</div>
 }
